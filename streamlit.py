@@ -23,7 +23,7 @@ def add_bg_from_url():
      )
 
 
-df = pd.read_csv('Firsts - st (2).csv')
+df = pd.read_csv('Firsts - st.csv')
 
 def page1():
   add_bg_from_url()
