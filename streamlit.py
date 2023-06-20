@@ -51,7 +51,7 @@ def page2():
 def page3():
   add_bg_from_url()
   m = folium.Map(location=[df.latitude.mean(), df.longitude.mean()], 
-                 zoom_start=3, control_scale=True)
+                 zoom_start=3, control_scale=True, width=IMAGE_WIDTH,height=IMAGE_WIDTH)
 
   #Loop through each row in the dataframe
   for i,row in df.iterrows():
