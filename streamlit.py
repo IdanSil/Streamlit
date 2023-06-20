@@ -56,7 +56,7 @@ def page3():
   #Loop through each row in the dataframe
   for i,row in df.iterrows():
       #Setup the content of the popup
-      iframe = folium.IFrame('What happend here? \n' + str(row["event"] + '\n Where was it? \n' +row["place"]))
+      iframe = folium.IFrame('What happend here? \n' + str(row["event"]) + '\n Where was it? \n' +str(row["place"]))
       
       #Initialise the popup using the iframe
       popup = folium.Popup(iframe, min_width=300, max_width=300)
