@@ -78,18 +78,18 @@ def page3():
                  zoom_start=3, control_scale=True, width=IMAGE_WIDTH)
 
   #Loop through each row in the dataframe
-  for i,row in df.iterrows():
-      #Setup the content of the popup
-      iframe = folium.IFrame('What happend here? \n' + str(row["event"]) + '\n Where was it? \n' +str(row["place"]))
-      
-      #Initialise the popup using the iframe
-      popup = folium.Popup(iframe, min_width=300, max_width=300)
-      
-      #Add each row to the map
-      folium.Marker(location=[row['latitude'],row['longitude']],
+    for i,row in df.iterrows():
+        #Setup the content of the popup
+        iframe = folium.IFrame('What happend here? \n' + str(row["event"]) + '\n Where was it? \n' +str(row["place"]))
+        
+        #Initialise the popup using the iframe
+        popup = folium.Popup(iframe, min_width=300, max_width=300)
+        
+        #Add each row to the map
+        folium.Marker(location=[row['latitude'],row['longitude']],
                     popup = popup, c=row['event']).add_to(m)
 
-  folium_static(m, width=IMAGE_WIDTH)
+    folium_static(m, width=IMAGE_WIDTH)
 
 pages = {
     "Home": page1,
