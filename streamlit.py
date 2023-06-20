@@ -40,13 +40,13 @@ def page2():
   st.header('Our Story')
   # Display events as cards
   for index, row in df.iterrows():
-          if row['timeline']:
+      if row['timeline']:
           st.subheader(row['event'])
           st.write('Date: ', row['date'])
           st.write('Location: ', row['place'])
           st.image(row['image_link'],width=IMAGE_WIDTH)
           st.write(row['notes'])
-      st.markdown("---")  # Line separator
+          st.markdown("---")  # Line separator
 
 def page3():
   add_bg_from_url()
