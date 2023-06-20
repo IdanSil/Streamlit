@@ -5,7 +5,7 @@ import folium
 from streamlit_folium import st_folium, folium_static
 
 IMAGE_WIDTH = 300
-BG_LINK = 'https://img.freepik.com/premium-vector/valentine-hearts-background-white-color-abstract-background-design-with-symbol-love_292608-15363.jpg'
+BG_LINK = 'https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg'
 LOGO_LINK = ''
 
 def add_bg_from_url():
@@ -35,18 +35,18 @@ def page1():
   st.write(relationship_summary)
 
 def page2():
-  add_bg_from_url()
-  st.title("Learlir & Dandan")
-  st.header('Our Story')
-  # Display events as cards
-  for index, row in df.iterrows():
-      if row['timeline']:
-          st.subheader(row['event'])
-          st.write('Date: ', row['date'])
-          st.write('Location: ', row['place'])
-          st.image(row['image_link'],width=IMAGE_WIDTH)
-          st.write(row['notes'])
-          st.markdown("---")  # Line separator
+    add_bg_from_url()
+    st.title("Learlir & Dandan")
+    st.header('Our Story')
+    # Display events as cards
+    for index, row in df.iterrows():
+        if row['missing']== "no":
+            st.subheader(row['event'])
+            st.write('Date: ', row['date'])
+            st.write('Location: ', row['place'])
+            st.image(row['image_link'],width=IMAGE_WIDTH)
+            st.write(row['notes'])
+            st.markdown("---")  # Line separator
 
 def page3():
   add_bg_from_url()
@@ -56,7 +56,7 @@ def page3():
   #Loop through each row in the dataframe
   for i,row in df.iterrows():
       #Setup the content of the popup
-      iframe = folium.IFrame('What happend here? /n' + str(row["event"] + '/n Where was it? /n' +row["place"]))
+      iframe = folium.IFrame('What happend here? \n' + str(row["event"] + '\n Where was it? \n' +row["place"]))
       
       #Initialise the popup using the iframe
       popup = folium.Popup(iframe, min_width=300, max_width=300)
