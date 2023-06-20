@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import pydeck as pdk
-from streamlit_extras.app_logo import add_logo
 import folium
 from streamlit_folium import st_folium, folium_static
 
