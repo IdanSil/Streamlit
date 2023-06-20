@@ -8,6 +8,29 @@ IMAGE_WIDTH = 300
 BG_LINK = 'https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg'
 LOGO_LINK = ''
 
+def add_logo():
+    st.markdown(
+        """
+        <style>
+            [data-testid="stSidebarNav"] {
+                background-image: url(http://placekitten.com/200/200);
+                background-repeat: no-repeat;
+                padding-top: 120px;
+                background-position: 20px 20px;
+            }
+            [data-testid="stSidebarNav"]::before {
+                content: "My Company Name";
+                margin-left: 20px;
+                margin-top: 20px;
+                font-size: 30px;
+                position: relative;
+                top: 100px;
+            }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+    
 def add_bg_from_url():
     st.markdown(
          f"""
@@ -26,13 +49,14 @@ def add_bg_from_url():
 df = pd.read_csv('Firsts - st.csv')
 
 def page1():
-  add_bg_from_url()
-  st.title("Learlir & Dandan")
-  st.header(':heart: 2 Amazing Years Together :heart:')
-  st.image('https://i.ibb.co/7rBQv9V/camel-removebg-preview.png', width=IMAGE_WIDTH)
-  st.subheader('Our Story, by ChatGPT')
-  relationship_summary = "In the summer of 2021, your eyes met for the first time at IDC, and it wasn't long before you shared your first kiss and official date at the Municipal Bar. Your bond deepened over shared laughter on your second date at Yam Bar, and during the third date, a pizza night at Lear's old apartment, your connection became undeniable. A thrilling movie night and a first sleepover paved the way to a stronger relationship. Amid these beautiful moments, you expressed your love for each other, an emotion beautifully captured during a documented ride together. Before embarking on a long-distance relationship phase of five months, you took a memorable trip to Mitzpe Ramon, creating cherished memories to hold on to during your time apart. During the long-distance period, Lear visited Idan in Madrid, symbolizing your dedication to each other. Upon reuniting, you began a thrilling chapter of adventures, traveling to Rome and Greece, moving in together, and even adopting a 'doggy daughter' named 'Lulu'. Over the span of these two years, your love story unfolded, marked by shared adventures, new beginnings, and enduring love that transcends distance."
-  st.write(relationship_summary)
+    add_logo()
+    add_bg_from_url()
+    st.title("Learlir & Dandan")
+    st.header(':heart: 2 Amazing Years Together :heart:')
+    st.image('https://i.ibb.co/7rBQv9V/camel-removebg-preview.png', width=IMAGE_WIDTH)
+    st.subheader('Our Story, by ChatGPT')
+    relationship_summary = "In the summer of 2021, your eyes met for the first time at IDC, and it wasn't long before you shared your first kiss and official date at the Municipal Bar. Your bond deepened over shared laughter on your second date at Yam Bar, and during the third date, a pizza night at Lear's old apartment, your connection became undeniable. A thrilling movie night and a first sleepover paved the way to a stronger relationship. Amid these beautiful moments, you expressed your love for each other, an emotion beautifully captured during a documented ride together. Before embarking on a long-distance relationship phase of five months, you took a memorable trip to Mitzpe Ramon, creating cherished memories to hold on to during your time apart. During the long-distance period, Lear visited Idan in Madrid, symbolizing your dedication to each other. Upon reuniting, you began a thrilling chapter of adventures, traveling to Rome and Greece, moving in together, and even adopting a 'doggy daughter' named 'Lulu'. Over the span of these two years, your love story unfolded, marked by shared adventures, new beginnings, and enduring love that transcends distance."
+    st.write(relationship_summary)
 
 def page2():
     add_bg_from_url()
@@ -49,9 +73,9 @@ def page2():
             st.markdown("---")  # Line separator
 
 def page3():
-  add_bg_from_url()
-  m = folium.Map(location=[df.latitude.mean(), df.longitude.mean()], 
-                 zoom_start=3, control_scale=True, width=IMAGE_WIDTH,height=IMAGE_WIDTH)
+    add_bg_from_url()
+    m = folium.Map(location=[df.latitude.mean(), df.longitude.mean()], 
+                 zoom_start=3, control_scale=True, width=IMAGE_WIDTH)
 
   #Loop through each row in the dataframe
   for i,row in df.iterrows():
