@@ -5,7 +5,7 @@ import folium
 from streamlit_folium import st_folium, folium_static
 
 IMAGE_WIDTH = 300
-BG_LINK = 'https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg'
+BG_LINK = 'https://img.freepik.com/free-vector/multicolored-palm-silhouettes-background_23-2148562058.jpg'
 LOGO_LINK = ''
 
 def add_logo():
