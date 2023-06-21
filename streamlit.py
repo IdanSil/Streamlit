@@ -7,29 +7,6 @@ from streamlit_folium import st_folium, folium_static
 IMAGE_WIDTH = 300
 BG_LINK = 'https://img.freepik.com/free-vector/multicolored-palm-silhouettes-background_23-2148562058.jpg'
 LOGO_LINK = ''
-
-def add_logo():
-    st.markdown(
-        """
-        <style>
-            [data-testid="stSidebarNav"] {
-                background-image: url(BG_LINK);
-                background-repeat: no-repeat;
-                padding-top: 120px;
-                background-position: 20px 20px;
-            }
-            [data-testid="stSidebarNav"]::before {
-                content: "My Company Name";
-                margin-left: 20px;
-                margin-top: 20px;
-                font-size: 30px;
-                position: relative;
-                top: 100px;
-            }
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
     
 def add_bg_from_url():
     st.markdown(
@@ -56,7 +33,6 @@ df = load_data(st.secrets["public_gsheets_url"])
 
 
 def page1():
-    add_logo()
     add_bg_from_url()
     st.title("Learlir & Dandan")
     st.header(':heart: 2 Amazing Years Together :heart:')
