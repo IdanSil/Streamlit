@@ -125,7 +125,7 @@ def page4():
 pages = {
     "Home": page1,
     "Timeline": page2,
-    "Map": page3
+    "Map": page3,
     "Invitation": page4
 }
 
