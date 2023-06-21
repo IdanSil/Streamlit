@@ -127,6 +127,7 @@ def page4():
 
     st.write(message)
     st.markdown("---")
+    st.subheader('Keep Reading... We're almost done 😂')
     st.write("I bet you were wondering this whole time - Ok... 'but how can we exist without a proper logo?', Well as usual you're right, there it is!")
     st.image(LOGO_LINK,width=IMAGE_WIDTH)
     
