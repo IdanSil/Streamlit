@@ -13,7 +13,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url(BG_LINK);
+             background-image: url({BG_LINK});
              background-attachment: fixed;
              background-size: cover
          }}
