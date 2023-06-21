@@ -5,8 +5,8 @@ import folium
 from streamlit_folium import st_folium, folium_static
 
 IMAGE_WIDTH = 300
-BG_LINK = 'https://img.freepik.com/free-vector/multicolored-palm-silhouettes-background_23-2148562058.jpg'
-LOGO_LINK = ''
+BG_LINK = 'https://img.freepik.com/premium-vector/seamless-horizontal-tropical-background-hand-drawn-palm-trees-sketch-exotic-tropic-jungle-leaves-paradise-palm-tree-wallpaper-illustration_102902-2665.jpg'
+LOGO_LINK = 'https://i.ibb.co/7rBQv9V/camel-removebg-preview.png'
     
 def add_bg_from_url():
     st.markdown(
@@ -21,6 +21,29 @@ def add_bg_from_url():
          """,
          unsafe_allow_html=True
      )
+
+def add_logo():
+    st.markdown(
+        """
+        <style>
+            [data-testid="stSidebarNav"] {
+                background-image: url({LOGO_LINK});
+                background-repeat: no-repeat;
+                padding-top: 120px;
+                background-position: 20px 20px;
+            }
+            [data-testid="stSidebarNav"]::before {
+                content: "My Company Name";
+                margin-left: 20px;
+                margin-top: 20px;
+                font-size: 30px;
+                position: relative;
+                top: 100px;
+            }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
 
 # Read in data from the Google Sheet.
 # Uses st.cache_data to only rerun when the query changes or after 10 min.
