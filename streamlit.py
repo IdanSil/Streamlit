@@ -8,7 +8,7 @@ IMAGE_WIDTH = 300
 BG_LINK = ['https://i.ibb.co/mS0n1tc/Zz0z-ZTli-Mj-Q4-Mzhl-NGEx-MWVi-Ym-Ji-Mj-Fi-ZTI2-ZWNm-N2-Mz-ZA.jpg',
 'https://i.ibb.co/6JVSMkm/Zz05-Nm-M1-Yj-Fj-Yjhl-NDIx-MWVi-ODcz-ZWQz-Yz-Bk-NTFl-NDU4-ZA.jpg',
 'https://i.ibb.co/PcRSgmj/DALL-E-2023-06-22-02-04-09-blurred-hearts-in-the-background-with-very-light-reds-mostly-white.png',
-'https://i.ibb.co/z8N1LP9/DALL-E-2023-06-22-02-03-28-blurred-hearts-in-the-background-with-gradient-of-light-red-and-pink.png'][0]
+'https://i.ibb.co/z8N1LP9/DALL-E-2023-06-22-02-03-28-blurred-hearts-in-the-background-with-gradient-of-light-red-and-pink.png'][1]
 LOGO_LINK = 'https://i.ibb.co/7rBQv9V/camel-removebg-preview.png'
 FIRST_PAGE_LINK = 'https://i.etsystatic.com/icm/44e445/558970353/icm_fullxfull.558970353_nt195fa87j4gswwwkcgw.jpg'
     
