@@ -69,13 +69,25 @@ def page2():
     add_bg_from_url()
     st.title("Learlir & Dandan")
     st.header('Our Story')
-    # Display events as cards
-    for index, row in df.iterrows():
-        if row['missing']== "no":
+
+    # Add Year and Month Filters
+    selected_year = st.selectbox("Filter by Year", ['', '2021', '2022', '2023'])
+    selected_month = st.selectbox("Filter by Month", ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'])
+
+    # Filter DataFrame based on selected filters
+    filtered_df = df.copy()
+    if selected_year:
+        filtered_df = filtered_df[filtered_df['date'].str.contains(selected_year)]
+    if selected_month:
+        filtered_df = filtered_df[pd.to_datetime(filtered_df['date']).dt.strftime("%B") == selected_month]
+
+    # Display filtered events as cards
+    for index, row in filtered_df.iterrows():
+        if row['missing'] == "no":
             st.subheader(row['event'])
-            st.write('Date: ', row['date'])
+            st.write('Date: ', pd.to_datetime(row['date']).strftime("%B %d, %Y"))
             st.write('Location: ', row['place'])
-            st.image(row['image_link'],width=IMAGE_WIDTH)
+            st.image(row['image_link'], width=IMAGE_WIDTH)
             st.write(row['notes'])
             st.markdown("---")  # Line separator
 
