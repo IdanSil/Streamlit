@@ -132,6 +132,7 @@ def page4():
     st.write("I bet you were wondering this whole time - Ok... 'but how can we exist without a proper logo?', Well as usual you're right, there it is!")
     if st.button("Show me already"):
         st.image(LOGO_LINK,width=IMAGE_WIDTH)
+        st.write("TA-DAA! Love You :heart:")
     
 
 pages = {
