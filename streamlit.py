@@ -120,8 +120,8 @@ def page3():
 
 def page4():
     add_bg_from_url()
-    st.title("Learlir & Dandan")
-    st.header('Another Beautiful Year Together')
+    st.title("Kindly RSVP 🗓️")
+    st.header('For Another Beautiful Year Together')
 
     message = "Happy anniversary, Boobz! As we reflect on our journey over the past two years, I am overwhelmed with gratitude and love. The memories we have created together, from our first meeting at IDC to our adventures in Rome and Greece, have been nothing short of magical. Your presence in my life fills each day with joy and warmth. I am excited for the countless adventures and beautiful moments that lie ahead. Cheers to another year of love, growth, and shared happiness. I love you, always and forever."
 
