@@ -107,7 +107,7 @@ def page3():
   #Loop through each row in the dataframe
     for i,row in df.iterrows():
         #Setup the content of the popup
-        iframe = folium.IFrame('What happend here? \n' + str(row["event"]) + '\n Where was it? \n' +str(row["place"]))
+        iframe = folium.IFrame('What happened here? ' + str(row["event"]) + ' Oh right, and where was it? ' +str(row["place"]))
         
         #Initialise the popup using the iframe
         popup = folium.Popup(iframe, min_width=300, max_width=300)
@@ -123,7 +123,7 @@ def page4():
     st.title("Kindly RSVP 🗓️")
     st.header('For Another Beautiful Year Together')
 
-    message = "Happy anniversary, Boobz! As we reflect on our journey over the past two years, I am overwhelmed with gratitude and love. The memories we have created together, from our first meeting at IDC to our adventures in Rome and Greece, have been nothing short of magical. Your presence in my life fills each day with joy and warmth. I am excited for the countless adventures and beautiful moments that lie ahead. Cheers to another year of love, growth, and shared happiness. I love you, always and forever."
+    message = "Happy anniversary, Boobz! As we reflect on our journey over the past two years, I am overwhelmed with gratitude and love. The memories we have created together, from our first meeting at IDC to our adventures in Rome and Greece, have been nothing short of magical. Your presence in my life fills each day with joy and warmth. I am excited for the countless adventures and beautiful moments that lie ahead. Cheers to another year of love, growth, and shared happiness. I love you so much"
 
     st.write(message)
     st.markdown("---")
